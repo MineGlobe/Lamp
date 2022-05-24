@@ -38,7 +38,6 @@ public final class JDAHandler extends BaseCommandHandler implements JDACommandHa
         registerSnowflakeResolver(Emote.class, EMOTE);
         registerSnowflakeResolver(Role.class, ROLE);
         registerSnowflakeResolver(Category.class, CATEGORY);
-        registerSnowflakeResolver(User.class, USER);
         registerDependency(JDA.class, jda);
         registerContextResolver(JDA.class, ContextResolver.of(jda));
         registerResponseHandler(RestAction.class, (response, actor, command) -> response.queue());
